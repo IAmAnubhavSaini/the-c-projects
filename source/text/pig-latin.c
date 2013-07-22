@@ -1,6 +1,8 @@
 /* Anubhav Saini
 * read: wiki/pig_latin
 * pig latin becomes igpay atinlay : add "ay" after first-only consonant(s) and paste [consonant(s)"ay"] in the end and remove consonant(s) from the start.
+* 
+* This code listing is by no means optimal. Please do fork this project and improve. I would love to learn better way to solve this.
 */
 
 #include<stdio.h>

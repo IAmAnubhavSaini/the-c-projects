@@ -1,6 +1,8 @@
 /* Anubhav Saini
  * read: wiki/pig_latin
  * turkey irish becomes taburkabey abirabish : add "ab" before each vowel.
+ * 
+ * This code listing is by no means optimal. Please do fork this project and improve. I would love to learn better way to solve this.
  */
 
 #include<stdio.h>
