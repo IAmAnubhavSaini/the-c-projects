@@ -1,6 +1,6 @@
 /* Anubhav Saini
  * read: wiki/pig_latin
- * opish becomes opopisophop : add "op" after every consonant.
+ * turkey irish becomes taburkabey abirabish : add "ab" before each vowel.
  */
 
 #include<stdio.h>
@@ -10,25 +10,18 @@
 char vowels[5] = { 'a', 'e', 'i', 'o', 'u' };
 
 void main(){
-  char suffix1 = 'o', suffix2='p';
   char input;
   int i = 0;
-  int flagIsConsonant = 1;
-  printf("\nKeep entering letters to convert to opish: ");
+  printf("\nKeep entering letters to convert to turkey-irish: ");
   while(scanf("%c",&input) && input != EOF){
     if(ISALPHA(input)){
-      flagIsConsonant = 1;
       for(i = 0; i < 5; i++){
         if(input == vowels[i]){
-          flagIsConsonant = 0;
+          printf("ab");
           break;
         }
       }
       printf("%c",input);
-      if(flagIsConsonant){
-        putchar(suffix1);
-        putchar(suffix2);
-      }
     }
     else{
       puts(" ");
