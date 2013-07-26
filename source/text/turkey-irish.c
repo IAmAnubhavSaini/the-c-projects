@@ -1,8 +1,20 @@
-/* Anubhav Saini
- * read: wiki/pig_latin
+/* copyright 2013-onwards Anubhav Saini
+ * github.com/IAmAnubhavSaini
+ * project: github.com/IAmAnubhavSaini/the-c-projects
+ *
+ * purpose
+ * -------
  * turkey irish becomes taburkabey abirabish : add "ab" before each vowel.
- * 
+ * read: wiki/pig_latin
+ *
+ * Licence
+ * -------
+ * MIT
+ *
+ * Request
+ * -------
  * This code listing is by no means optimal. Please do fork this project and improve. I would love to learn better way to solve this.
+ *
  */
 
 #include<stdio.h>

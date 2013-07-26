@@ -1,11 +1,27 @@
-/* Anubhav Saini
- * keyed encription
+/* copyright 2013-onwards Anubhav Saini
+ * github.com/IAmAnubhavSaini
+ * project: github.com/IAmAnubhavSaini/the-c-projects
+ *
+ * purpose
+ * -------
+ * keyed encryption
+ *
+ * Licence
+ * -------
+ * MIT
+ *
+ * Usage
+ * -----
  * keyencrip.exe [key] [inputs...]
- * keyencrip.exe "19384" aaaaaaaaa 
- * will become bjdiebjdi
+ * e.g. keyencrip.exe "19384" aaaaaaaaa will become bjdiebjdi
  * COOLTHING: key can be of almost any length, but it will make sense to keep key at most as long as input
+ *
+ * Request
+ * -------
  * This code listing is by no means optimal. Please do fork this project and improve. I would love to learn better way to solve this.
+ *
  */
+
 
 #include<stdio.h>
 

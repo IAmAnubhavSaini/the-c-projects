@@ -1,10 +1,25 @@
-/* Anubhav Saini
- * 
+/* copyright 2013-onwards Anubhav Saini
+ * github.com/IAmAnubhavSaini
+ * project: github.com/IAmAnubhavSaini/the-c-projects
+ *
+ * purpose
+ * -------
  * prints fibonacci number series upto n
- * usage: fibo.exe n
+ *
+ * usage
+ * -----
+ * fibo.exe n
+ *
+ * Licence
+ * -------
+ * MIT
+ *
+ * Request
+ * -------
+ * This code listing is by no means optimal. Please do fork this project and improve. I would love to learn better way to solve this.
  *
  */
- 
+
  #include<stdio.h>
  #include<stdlib.h>
  
