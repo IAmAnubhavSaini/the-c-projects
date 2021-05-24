@@ -19,7 +19,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-char boundaries[12] = { ' ', ',', '-', '!', '@', '#', '$', '&', ':', ';', '(', ')' };
+char boundaries[12] = {' ', ',', '-', '!', '@', '#', '$', '&', ':', ';', '(', ')'};
 
 #define LOWER(c)            (c | 0x20)
 #define ISALPHA(c)          (LOWER(c) >= 'a' && LOWER(c) <= 'z')
@@ -41,19 +41,18 @@ char boundaries[12] = { ' ', ',', '-', '!', '@', '#', '$', '&', ':', ';', '(', '
   (c)==boundaries[11]    \
   )
 
-void main(){
-  int wc = 0;//word count
-  int insideWord = 0;
-  char ch;
+void main() {
+    int wc = 0;//word count
+    int insideWord = 0;
+    char ch;
 
-  printf("\nKeep entering and as soon as you hit EOF(ctrl+z), I will terminate and print result.\n:> ");
+    printf("\nKeep entering and as soon as you hit EOF(ctrl+z), I will terminate and print result.\n:> ");
 
-  while(scanf("%c", &ch) && ch!= EOF && ch != '\n'){
-    if(ISALPHANUM(ch)){
-      while(scanf("%c", &ch) && ch != '\n' && !ISWORDBOUNDARY(ch))
-        ;
-      wc++;
+    while (scanf("%c", &ch) && ch != EOF && ch != '\n') {
+        if (ISALPHANUM(ch)) {
+            while (scanf("%c", &ch) && ch != '\n' && !ISWORDBOUNDARY(ch));
+            wc++;
+        }
     }
-  }
-  printf("\nWord count: %d\n", wc);
+    printf("\nWord count: %d\n", wc);
 }

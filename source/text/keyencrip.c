@@ -38,32 +38,33 @@
 
 char rotN(char, int, int, int, int N);
 
-int main(int argc, char *argv[]){
- char *curr;
- char *key = argv[1];
- char *tempKey = key;
- //we want to start from third argument. Figure out why?
- argv++;argv++;
- while(argc-- > 2){
-  curr = *argv++;
-  while(*curr){
-    if(!*key){ key = tempKey; }
-    if(ISLOWER(*curr)){
-	  printf("%c", rotN(*curr, SmallMIN, SmallMAX, MOD, (int)(*key++ - '0'))); //guess why - '0'
-	}
-	if(ISUPPER(*curr)){
-	  printf("%c", rotN(*curr, CapMIN, CapMAX, MOD, (int)(*key++ - '0')));
-	}
-	curr++;
-  }
-  printf("\n");
- }
+int main(int argc, char *argv[]) {
+    char *curr;
+    char *key = argv[1];
+    char *tempKey = key;
+    //we want to start from third argument. Figure out why?
+    argv++;
+    argv++;
+    while (argc-- > 2) {
+        curr = *argv++;
+        while (*curr) {
+            if (!*key) { key = tempKey; }
+            if (ISLOWER(*curr)) {
+                printf("%c", rotN(*curr, SmallMIN, SmallMAX, MOD, (int) (*key++ - '0'))); //guess why - '0'
+            }
+            if (ISUPPER(*curr)) {
+                printf("%c", rotN(*curr, CapMIN, CapMAX, MOD, (int) (*key++ - '0')));
+            }
+            curr++;
+        }
+        printf("\n");
+    }
 }
 
-char rotN(char c, int min, int max, int mod, int N){
-  char temp = c+N;
-  if((int)c + N > max ){
-    temp = (char)(min + ((int)c + N -1 - max));// why N-1 is a good exercise if you already don't know the logic.
-  }
-  return temp;
+char rotN(char c, int min, int max, int mod, int N) {
+    char temp = c + N;
+    if ((int) c + N > max) {
+        temp = (char) (min + ((int) c + N - 1 - max));// why N-1 is a good exercise if you already don't know the logic.
+    }
+    return temp;
 }

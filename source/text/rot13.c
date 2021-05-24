@@ -32,29 +32,29 @@
 
 char rot13(char, int, int, int);
 
-int main(int argc, char *argv[]){
- char *curr ;
- argv++;
- while(argc-- > 1){
-  curr = *argv++;
-  while(*curr){
+int main(int argc, char *argv[]) {
+    char *curr;
+    argv++;
+    while (argc-- > 1) {
+        curr = *argv++;
+        while (*curr) {
 //    printf("%c", *curr);
-    if(ISLOWER(*curr)){
-	  printf("%c", rot13(*curr, SmallMIN, SmallMAX, MOD));
-	}
-	if(ISUPPER(*curr)){
-	  printf("%c", rot13(*curr, CapMIN, CapMAX, MOD));
-	}
-	curr++;
-  }
-  printf("\n");
- }
+            if (ISLOWER(*curr)) {
+                printf("%c", rot13(*curr, SmallMIN, SmallMAX, MOD));
+            }
+            if (ISUPPER(*curr)) {
+                printf("%c", rot13(*curr, CapMIN, CapMAX, MOD));
+            }
+            curr++;
+        }
+        printf("\n");
+    }
 }
 
-char rot13(char c, int min, int max, int mod){
-  char temp = c+13;
-  if((int)c + 13 > max ){
-    temp = (char)(min + ((int)c + 12 - max));// why 12 is a good exercise if you already don't know the logic.
-  }
-  return temp;
+char rot13(char c, int min, int max, int mod) {
+    char temp = c + 13;
+    if ((int) c + 13 > max) {
+        temp = (char) (min + ((int) c + 12 - max));// why 12 is a good exercise if you already don't know the logic.
+    }
+    return temp;
 }
