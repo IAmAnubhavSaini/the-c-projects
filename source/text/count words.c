@@ -1,4 +1,4 @@
-/* copyright 2013-onwards Anubhav Saini
+/* copyright 2013-2021 Anubhav Saini
  * github.com/IAmAnubhavSaini
  * project: github.com/IAmAnubhavSaini/the-c-projects
  *
